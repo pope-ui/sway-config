@@ -102,6 +102,10 @@ bindsym Ctrl+Mod1+S exec systemctl suspend
 bindsym Ctrl+Mod1+P exec systemctl poweroff
 bindsym Ctrl+Mod1+R exec systemctl reboot
 
+#
+# Screen Capture
+bindsym F12 exec grim ~/Screenshots/$(date +"%Y-%m-%d_%H-%M-%S").png; exec notify-send 'Grim' 'Image saved to ~/Screenshots'
+bindsym $mod+F12 exec grim -g "$(slurp)" ~/Screenshots/$(date +"%Y-%m-%d_%H-%M-%S").png; exec notify-send 'Grim' 'Selected image saved to ~/Screenshots'
 
 gaps inner 8px
 gaps outer 5px
